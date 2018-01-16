@@ -11,3 +11,5 @@ robot.leftClick()
 robot.rightClick()
 robot.screenShot('./screenshot.png')
 ```
+
+![robot.gif](./img/robot.gif)
