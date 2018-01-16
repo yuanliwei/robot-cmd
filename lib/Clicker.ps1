@@ -11,8 +11,8 @@ public class Clicker
   struct INPUT
   {
     public int        type; // 0 = INPUT_MOUSE,
-    // 1 = INPUT_KEYBOARD
-    // 2 = INPUT_HARDWARE
+                            // 1 = INPUT_KEYBOARD
+                            // 2 = INPUT_HARDWARE
     public MOUSEINPUT mi;
   }
 

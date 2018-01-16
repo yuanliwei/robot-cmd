@@ -15,12 +15,21 @@ class Robot {
     shell.stdin.write(powershell.leftClick())
   }
 
+  static doubleClick() {
+    shell.stdin.write(powershell.leftClick())
+    shell.stdin.write(powershell.leftClick())
+  }
+
   static rightClick() {
     shell.stdin.write(powershell.rightClick())
   }
 
   static screenShot(savePath) {
     shell.stdin.write(powershell.screenShot(savePath))
+  }
+
+  static sendKeys(keys) {
+    shell.stdin.write(powershell.sendKeys(keys))
   }
 
 }
