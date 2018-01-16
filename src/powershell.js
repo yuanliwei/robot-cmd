@@ -1,4 +1,5 @@
 var scripts = `
+# source code from https://stackoverflow.com/questions/39353073/how-i-can-send-mouse-click-in-powershell
 $cSource = @'
 using System;
 using System.Drawing;
