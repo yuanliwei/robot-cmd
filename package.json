@@ -1,0 +1,22 @@
+{
+  "name": "robot-cmd",
+  "version": "1.0.0",
+  "description": "Automatically operate the keyboard and mouse, do not need gyp",
+  "homepage": "https://github.com/yuanliwei/robot-cmd",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "keywords": [
+    "robot",
+    "powershell",
+    "mouse",
+    "keyboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuanliwei/robot-cmd.git"
+  },
+  "author": "yuanliwei",
+  "license": "ISC"
+}
