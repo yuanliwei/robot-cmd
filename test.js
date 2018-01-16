@@ -16,6 +16,8 @@ var start = async ()=>{
   await sleep(1000)
   // robot.leftClick()
   robot.rightClick()
+  await sleep(1000)
+  robot.screenShot('./screenshot.png')
 }
 
 start()

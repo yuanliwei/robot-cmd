@@ -1,4 +1,3 @@
-var scripts = `
 # source code from https://stackoverflow.com/questions/39353073/how-i-can-send-mouse-click-in-powershell
 $cSource = @'
 using System;
@@ -84,17 +83,4 @@ public class Clicker
 '@
 Add-Type -TypeDefinition $cSource -ReferencedAssemblies System.Windows.Forms,System.Drawing
 # Send a click at a specified point
-#[Clicker]::LeftClickAtPoint(600,600)\n
-`
-
-exports.shell = 'powershell'
-exports.script = scripts
-exports.moveTo = function (x,y) {
-  return `[Clicker]::MoveToPoint(${x},${y})\n`
-};
-exports.leftClick = function () {
-  return `[Clicker]::LeftClick()\n`
-};
-exports.rightClick = function () {
-  return `[Clicker]::RightClick()\n`
-};
+#[Clicker]::LeftClickAtPoint(600,600)

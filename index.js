@@ -1,5 +1,5 @@
 const { exec } = require('child_process');
-const powershell = require('./src/powershell');
+const powershell = require('./lib/powershell');
 const shell = exec(powershell.shell)
 
 class Robot {
@@ -17,6 +17,10 @@ class Robot {
 
   static rightClick() {
     shell.stdin.write(powershell.rightClick())
+  }
+
+  static screenShot(savePath) {
+    shell.stdin.write(powershell.screenShot(savePath))
   }
 
 }

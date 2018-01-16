@@ -9,4 +9,5 @@ const robot = require('robot-cmd')
 robot.moveTo(100,100)
 robot.leftClick()
 robot.rightClick()
+robot.screenShot('./screenshot.png')
 ```
