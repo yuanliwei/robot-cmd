@@ -7,6 +7,12 @@ var sleep = (time)=>{
 }
 
 var start = async ()=>{
+  console.log('start');
+  await sleep(3000)
+  robot.wheelDown()
+  await sleep(100)
+  robot.wheelUp()
+  await sleep(1000)
   await sleep(1000)
   robot.moveTo(100,100)
   await sleep(1000)
@@ -23,7 +29,8 @@ var start = async ()=>{
   robot.screenShot('./screenshot.png')
   await sleep(1000)
   robot.sendKeys('S D F G H {ENTER}')
-
+  console.log('end');
+  
 }
 
 start()

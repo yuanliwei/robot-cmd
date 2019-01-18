@@ -7,8 +7,8 @@ class Robot {
 
   }
 
-  static moveTo(x,y) {
-    shell.stdin.write(powershell.moveTo(x,y))
+  static moveTo(x, y) {
+    shell.stdin.write(powershell.moveTo(x, y))
   }
 
   static leftClick() {
@@ -22,6 +22,14 @@ class Robot {
 
   static rightClick() {
     shell.stdin.write(powershell.rightClick())
+  }
+
+  static wheelDown() {
+    shell.stdin.write(powershell.wheelDown())
+  }
+
+  static wheelUp() {
+    shell.stdin.write(powershell.wheelUp())
   }
 
   static screenShot(savePath) {

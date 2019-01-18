@@ -48,6 +48,9 @@ public class Clicker
   [System.Runtime.InteropServices.DllImport("user32.dll")]
   extern static uint SendInput(uint nInputs, INPUT[] pInputs, int cbSize);
 
+  [System.Runtime.InteropServices.DllImport("user32.dll")]
+  static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
+
   public static void MoveToPoint(int x, int y)
   {
     //Move the mouse
@@ -79,6 +82,19 @@ public class Clicker
     input[1].mi.dwFlags = MOUSEEVENTF_RIGHTUP;
     SendInput(2, input, Marshal.SizeOf(input[0]));
   }
+
+  public static void WheelDown()
+  {
+    int MOUSEEVENTF_WHEEL = 0x0800;
+    mouse_event(MOUSEEVENTF_WHEEL, 0, 0, -120, 0);
+  }
+
+  public static void WheelUp()
+  {
+    int MOUSEEVENTF_WHEEL = 0x0800;
+    mouse_event(MOUSEEVENTF_WHEEL, 0, 0, 120, 0);
+  }
+
 }
 '@
 Add-Type -TypeDefinition $cSource -ReferencedAssemblies System.Windows.Forms,System.Drawing
