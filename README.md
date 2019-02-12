@@ -8,8 +8,12 @@ const robot = require('robot-cmd')
 
 robot.moveTo(100,100)
 robot.leftClick()
+robot.leftDown()
+robot.leftUp()
 robot.doubleClick()
 robot.rightClick()
+robot.rightDown()
+robot.rightUp()
 robot.screenShot('./screenshot.png')
 robot.sendKeys('S D F G H {ENTER}')
 ```
