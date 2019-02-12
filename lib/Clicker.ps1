@@ -72,6 +72,22 @@ public class Clicker
     SendInput(2, input, Marshal.SizeOf(input[0]));
   }
 
+  public static void LeftDown()
+  {
+    INPUT[] input = new INPUT[1];
+    //Left mouse button down
+    input[0].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
+    SendInput(1, input, Marshal.SizeOf(input[0]));
+  }
+
+  public static void LeftUp()
+  {
+    INPUT[] input = new INPUT[1];
+    //Left mouse button up
+    input[0].mi.dwFlags = MOUSEEVENTF_LEFTUP;
+    SendInput(1, input, Marshal.SizeOf(input[0]));
+  }
+
   public static void RightClick()
   {
     //Move the mouse
@@ -81,6 +97,22 @@ public class Clicker
     //Right mouse button up
     input[1].mi.dwFlags = MOUSEEVENTF_RIGHTUP;
     SendInput(2, input, Marshal.SizeOf(input[0]));
+  }
+
+  public static void RightDown()
+  {
+    INPUT[] input = new INPUT[1];
+    //Right mouse button down
+    input[0].mi.dwFlags = MOUSEEVENTF_RIGHTDOWN;
+    SendInput(1, input, Marshal.SizeOf(input[0]));
+  }
+
+  public static void RightUp()
+  {
+    INPUT[] input = new INPUT[1];
+    //Right mouse button up
+    input[0].mi.dwFlags = MOUSEEVENTF_RIGHTUP;
+    SendInput(1, input, Marshal.SizeOf(input[0]));
   }
 
   public static void WheelDown()
