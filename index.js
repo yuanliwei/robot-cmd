@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 const powershell = require('./lib/powershell');
-const shell = exec(powershell.shell)
+const shell = exec(powershell.shell, {windowsHide: true})
 
 class Robot {
   constructor() {
