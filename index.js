@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 const powershell = require('./lib/powershell');
-const shell = exec(powershell.shell)
+const shell = exec(powershell.shell, {windowsHide: true});
 
 class Robot {
   constructor() {
@@ -15,6 +15,14 @@ class Robot {
     shell.stdin.write(powershell.leftClick())
   }
 
+  static leftDown() {
+    shell.stdin.write(powershell.leftDown())
+  }
+
+  static leftUp() {
+    shell.stdin.write(powershell.leftUp())
+  }
+
   static doubleClick() {
     shell.stdin.write(powershell.leftClick())
     shell.stdin.write(powershell.leftClick())
@@ -22,6 +30,14 @@ class Robot {
 
   static rightClick() {
     shell.stdin.write(powershell.rightClick())
+  }
+
+  static rightDown() {
+    shell.stdin.write(powershell.rightDown())
+  }
+
+  static rightUp() {
+    shell.stdin.write(powershell.rightUp())
   }
 
   static wheelDown() {
