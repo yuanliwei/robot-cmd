@@ -1,5 +1,5 @@
 # robot-cmd
-Automatically operate the keyboard and mouse, do not need gyp
+Automatically operate the keyboard and mouse, do not need gyp.
 
 ## Example
 
@@ -14,6 +14,8 @@ robot.doubleClick()
 robot.rightClick()
 robot.rightDown()
 robot.rightUp()
+robot.wheelDown()
+robot.wheelUp()
 robot.screenShot('./screenshot.png')
 robot.sendKeys('S D F G H {ENTER}')
 ```
